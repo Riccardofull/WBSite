@@ -67,7 +67,7 @@
             </p>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div>
-                <a href="/drawings" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-700 hover:bg-gray-900 md:py-4 md:text-lg md:px-10">
+                <a href="/drawings" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:opacity-90 md:py-4 md:text-lg md:px-10">
                   {{$t("discoverMore")}}
                 </a>
               </div>

@@ -16,5 +16,8 @@
     "bear": "Orsetto",
     "colors": "A colori",
     "blackAndWhite": "Bianco e nero",
-    "hard": "Hard"
+    "hard": "Hard",
+    "pageNotFound": "Page not found",
+    "checkUrl": "Si prega di controllare l'URL nella barra degli indirizzi e riprovare.",
+    "goBackHome": "Torna alla home"
 }
