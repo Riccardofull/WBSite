@@ -18,7 +18,7 @@ const postcssPlugins = [
 
 module.exports = {
   siteName: 'William Bondi',
-  siteUrl: "https://williambondi.info",
+  siteUrl: "https://www.williambondi.info",
   siteDescription: "",
   titleTemplate: "William Bondi",
   plugins: [
