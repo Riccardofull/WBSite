@@ -8,7 +8,7 @@
           <div class="group relative">
             <a href="/blackandwhite">
               <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-gray-700 border">
-                <img src="../assets/img/williamBondiBlackAndWhiteCategory.jpg" alt="William Bondi black and white" class="w-full h-full object-center object-cover">
+                <g-image src="../assets/img/williamBondiBlackAndWhiteCategory.jpg" alt="William Bondi black and white" class="w-full h-full object-center object-cover" />
               </div>
             </a>
             <h3 class="mt-2 text-sm text-gray-700">
@@ -20,7 +20,7 @@
           <div class="group relative">
             <a href="/colors">
               <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-gray-700 border">
-                <img src="../assets/img/williamBondiColorsCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover">
+                <g-image src="../assets/img/williamBondiColorsCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover" />
               </div>
             </a>
             <h3 class="mt-2 text-sm text-gray-700">
@@ -32,7 +32,7 @@
           <div class="group relative">
             <a href="/redandwhite">
               <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-gray-700 border">
-                <img src="../assets/img/williamBondiRedAndWhiteCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover">
+                <g-image src="../assets/img/williamBondiRedAndWhiteCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover" />
               </div>
             </a>
             <h3 class="mt-2 text-sm text-gray-700">
@@ -44,7 +44,7 @@
           <div class="group relative lg:pt-12">
             <a href="/bear">
               <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-gray-700 border">
-                <img src="../assets/img/williamBondiBearCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover">
+                <g-image src="../assets/img/williamBondiBearCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover" />
               </div>
             </a>
             <h3 class="mt-2 text-sm text-gray-700">
@@ -56,7 +56,7 @@
           <div class="group relative lg:pt-12">
             <a href="/zodiac">
               <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-gray-700 border">
-                <img src="../assets/img/williamBondiZodiacCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover">
+                <g-image src="../assets/img/williamBondiZodiacCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover" />
               </div>
             </a>
             <h3 class="mt-2 text-sm text-gray-700">
@@ -68,7 +68,7 @@
           <div class="group relative lg:pt-12">
             <a href="/hard">
               <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 border-gray-700 border">
-                <img src="../assets/img/williamBondiHardCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover">
+                <g-image src="../assets/img/williamBondiHardCategory.jpg" alt="William Bondi red and white" class="w-full h-full object-center object-cover" />
               </div>
             </a>
             <h3 class="mt-2 text-sm text-gray-700">

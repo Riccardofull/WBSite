@@ -7,7 +7,7 @@
                     <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                         <div class="flex items-center justify-between w-full md:w-auto">
                         <a href="/">
-                            <img class="h-8 w-auto sm:h-10" src="../assets/svg/williamBondi.svg" alt="William Bondi">
+                            <g-image class="h-8 w-auto sm:h-10" src="../assets/svg/williamBondi.svg" alt="William Bondi" />
                         </a>
                         <div class="-mr-2 flex items-center md:hidden">
                             <button @click="open = true" type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -31,7 +31,7 @@
                     <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div class="px-5 pt-4 flex items-center justify-between">
                             <div>
-                            <img class="h-8 w-auto" src="../assets/svg/williamBondi.svg" alt="William Bondi">
+                            <g-image class="h-8 w-auto" src="../assets/svg/williamBondi.svg" alt="William Bondi" />
                             </div>
                             <div class="-mr-2">
                             <button @click="open = false" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-inset">
