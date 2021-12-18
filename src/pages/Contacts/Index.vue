@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <AlternativeHero title="drawings" description="drawingsDesc"/>
+        <AlternativeHero title="contacts" description="contactsDesc"/>
         <Footer />
     </Layout>
 </template>
@@ -10,7 +10,7 @@ import AlternativeHero from "../../components/AlternativeHero";
 import Footer from "../../components/Footer";
 
 export default {
-    name: "Drawings",
+    name: "Contacts",
     components: {
         AlternativeHero,
         Footer

@@ -25,9 +25,9 @@
                 </div>
               </div>
               <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                <a href="/" class="font-medium text-gray-700 hover:text-gray-900">{{$t("home")}}</a>
-                <a href="/drawings" class="font-medium text-gray-700 hover:text-gray-900">{{$t("drawings")}}</a>
-                <a href="/contacts" class="font-medium text-gray-700 hover:text-gray-900">{{$t("contacts")}}</a>
+                <a href="/" class="font-medium text-gray-700 hover:text-gray-900" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
+                <a href="/drawings" class="font-medium text-gray-700 hover:text-gray-900" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
+                <a href="/contacts" class="font-medium text-gray-700 hover:text-gray-900" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
               </div>
             </nav>
           </div>
@@ -49,9 +49,9 @@
                 </div>
               </div>
               <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{$t("home")}}</a>
-                <a href="/drawings" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{$t("drawings")}}</a>
-                <a href="/contacts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{$t("contacts")}}</a>
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
+                <a href="/drawings" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
+                <a href="/contacts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
               </div>
             </div>
           </div>
