@@ -77,7 +77,7 @@
       </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <g-image class="h-46 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="../assets/img/williamBondiBiancaneve.jpg" alt="William Bondi Biancaneve" />
+      <g-image class="h-46 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="../assets/img/williamBondiColorsCategory.jpg" alt="William Bondi Biancaneve" />
     </div>
   </div>
 </template>
