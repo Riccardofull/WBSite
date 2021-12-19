@@ -1,5 +1,24 @@
 <template>
-    <div class="bg-white">
+    <div class="bg-gray-50">
+        <div class="relative">
+            <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="border-b pb-8 border-gray-200">
+                    <div class="pt-4 flex items-center justify-center">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-3 gap-x-6 lg:grid-cols-3 lg:grid-cols-6 xl:gap-x-8">
+                            <div v-for="category in categories" 
+                                :key="category.Id"
+                                class="text-center items-center text-sm font-medium text-gray-700 hover:text-gray-900 px-4 flex-nowrap flex-shrink-0"
+                                :class="selectedCategory == category.Name ? 'font-semibold' : 'font-medium'">
+                                <span @click="selectedCategory = category.Name">
+                                    {{ category.Name }}
+                                </span>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
         <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                 <div class="group" v-for="image in images" :key="image.Name">
@@ -23,10 +42,42 @@ export default {
     data() {
         return {
             images: [],
+            categories: [
+                {
+                    Id: 1,
+                    Name: this.$t("blackAndWhite"),
+                },
+                {
+                    Id: 2,
+                    Name: this.$t("colors"),
+                },
+                {
+                    Id: 3,
+                    Name: this.$t("redAndWhite"),
+                },
+                {
+                    Id: 4,
+                    Name: this.$t("bear"),
+                },
+                {
+                    Id: 5,
+                    Name: this.$t("zodiac"),
+                },
+                {
+                    Id: 6,
+                    Name: this.$t("hard"),
+                },
+            ],
+            selectedCategory: this.$t("blackAndWhite"),
         }
     },
     mounted() {
         this.importAll(require.context('../assets/img/drawings/', true, /\.jpg$/));
+    },
+    computed: {
+        filteredCategories(){
+
+        },
     },
     methods: {
         importAll(r) {
@@ -35,7 +86,7 @@ export default {
                 image = {
                     ...image,
                     Name: image.pathShort.replace('./', '').replace('.jpg',''),
-                    Path: "/" + Name
+                    Path: "/" + image.Name
                 };
                 return image;
             });
