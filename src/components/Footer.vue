@@ -20,7 +20,7 @@
           </a>
         </div>
       </nav>
-      <div class="mt-8 flex justify-center space-x-6">
+      <div class="mt-8 flex justify-center space-x-4">
         <a href="https://www.facebook.com/willybis007" target="_blank" class="text-gray-700 hover:text-gray-900">
           <span class="sr-only">Facebook</span>
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

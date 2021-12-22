@@ -4,14 +4,13 @@
             <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="border-b pb-6 border-gray-200">
                     <div class="pt-4 flex items-center justify-center">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-3 gap-x-6 lg:grid-cols-6 xl:gap-x-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-3 gap-x-6 lg:grid-cols-6 xl:gap-x-8 w-full ">
                             <div v-for="category in categories" 
                                 :key="category.Id"
-                                class="text-center items-center text-sm font-medium text-gray-700 hover:text-gray-900 px-4 flex-nowrap flex-shrink-0 cursor-pointer"
-                                :class="selectedCategory == category.Name ? 'font-semibold' : 'font-medium'">
-                                <span @click="selectedCategory = category.Name">
-                                    {{ category.ViewName }}
-                                </span>
+                                @click="selectCategory(category)"
+                                class="text-center items-center text-sm font-medium text-gray-700 flex-nowrap flex-shrink-0 cursor-pointer"
+                                :class="selectedCategory == category.Name ? 'font-semibold' : 'font-medium'">                           
+                                {{ category.ViewName }}
                             </div>                          
                         </div>
                     </div>
@@ -19,7 +18,7 @@
             </nav>
         </div>
 
-        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="max-w-2xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
             <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                 <div class="group" v-for="image in filteredImages" :key="image.Name">
                     <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 border border-gray-800">
@@ -35,47 +34,20 @@
 </template>
 
 <script>
+import {categories} from "../static/categories.js";
+
 export default {
     name: "DrawingList",
     data() {
         return {
             images: [],
-            categories: [
-                {
-                    Id: 1,
-                    Name: "BlackAndWhite",
-                    ViewName: this.$t("blackAndWhite"),
-                },
-                {
-                    Id: 2,
-                    Name: "Colors",               
-                    ViewName: this.$t("colors"),
-                },
-                {
-                    Id: 3,
-                    Name: "RedAndWhite",
-                    ViewName: this.$t("redAndWhite"),
-                },
-                {
-                    Id: 4,
-                    Name: "Bear",
-                    ViewName: this.$t("bear"),
-                },
-                {
-                    Id: 5,
-                    Name: "Zodiac",
-                    ViewName: this.$t("zodiac"),
-                },
-                {
-                    Id: 6,
-                    Name: "Hard",
-                    ViewName: this.$t("hard"),
-                },
-            ],
-            selectedCategory: "BlackAndWhite",
+            categories: [],
+            selectedCategory: "blackandwhite",
         }
     },
     mounted() {
+        this.categories = categories;
+        this.selectedCategory = this.$route.query.category;
         this.importAll(require.context('../assets/img/drawings/', true, /\.jpg$/));
     },
     computed: {
@@ -98,6 +70,22 @@ export default {
                 return image;
             });
         },
+        selectCategory(category){
+            this.selectedCategory = category.Name;
+            if(this.$route.query.category != this.selectedCategory){       
+                this.$router.replace({ path: "/drawings", query: { category: category.Name } });
+            }
+        }
+    },
+     watch: {
+        $route(to, from) {
+            if(to.query.categories && to.query.category != "" && this.categories && this.categories.length > 0){
+                let cat = this.categories.find(c => c.Name == to.query.category);
+                if(cat !== null && cat !== undefined){
+                    this.selectedCategory = cat.Name;
+                }
+            }     
+        }
     }
 }
 </script>
