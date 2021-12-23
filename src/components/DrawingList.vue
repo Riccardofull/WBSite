@@ -44,12 +44,14 @@ export default {
         return {
             images: [],
             categories: [],
-            selectedCategory: "blackandwhite",
+            selectedCategory: "BlackAndWhite",
         }
     },
     mounted() {
         this.categories = categories;
-        this.selectedCategory = this.$route.query.category;
+        if(this.$route.query.category){
+            this.selectedCategory = this.$route.query.category;
+        }
         this.importAll(require.context('../assets/img/drawings/', true, /\.jpg$/));
     },
     computed: {
