@@ -22,7 +22,7 @@
             <div class="grid grid-cols-1 gap-y-24 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                 <div class="group" v-for="image in filteredImages" :key="image.Name">
                     <div class="h-full bg-transparent rounded-lg overflow-hidden border border-gray-800">
-                        <g-image :src="image.pathLong" alt="William Bondi" class="w-full h-full object-center object-cover group-hover:opacity-75" />
+                        <g-image :src="image.ImageUrl" alt="William Bondi" class="w-full h-full object-center object-cover group-hover:opacity-75" />
                     </div>
                     <h3 class="mt-1 text-md text-gray-800 font-semibold">
                        {{ image.Name }}
@@ -36,7 +36,8 @@
 </template>
 
 <script>
-import {categories} from "../static/categories.js";
+import { categories } from "../static/categories.js";
+import { images } from "../static/images.js";
 
 export default {
     name: "DrawingList",
@@ -49,6 +50,7 @@ export default {
     },
     mounted() {
         this.categories = categories;
+        this.images = images;
         if(this.$route.query.category){
             this.selectedCategory = this.$route.query.category;
         }
@@ -65,19 +67,7 @@ export default {
     methods: {
         importAll(r) {
             r.keys().forEach(key => (this.images.push({ pathLong: r(key), pathShort: key })));
-            this.images = this.images.map(image => {
-                let sold = false;
-                if(image.pathShort.split("_").length > 1 && image.pathShort.split("_")[2] && image.pathShort.split("_")[2].replace('.jpg', '') == "V") {
-                    sold = true;
-                }   
-                image = {
-                    ...image,
-                    Category: image.pathShort.replace('./', '').split("_")[0],
-                    Name: image.pathShort.split("_")[1].replace('.jpg', ''),
-                    Sold: sold ? this.$t("sold") : "",
-                };
-                return image;
-            });
+
         },
         selectCategory(category){
             this.selectedCategory = category.Name;
