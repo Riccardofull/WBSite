@@ -19,14 +19,16 @@
         </div>
 
         <div class="max-w-2xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            <div class="grid grid-cols-1 gap-y-24 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                 <div class="group" v-for="image in filteredImages" :key="image.Name">
-                    <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 border border-gray-800">
+                    <div class="h-full bg-gray-200 rounded-lg overflow-hidden border border-gray-800">
                         <g-image :src="image.pathLong" alt="William Bondi" class="w-full h-full object-center object-cover group-hover:opacity-75" />
                     </div>
-                    <h3 class="mt-4 text-sm text-gray-800">
-                        {{image.Name}}
+                    <h3 class="mt-1 text-md text-gray-800 font-semibold">
+                        <span class="">{{ image.Name }}</span>
                     </h3>
+                    <span v-if="image.Sold != ''" 
+                        class="text-red-600 text-sm font-semibold uppercase">  {{ image.Sold }}</span>
                 </div>
             </div>
         </div>
@@ -62,10 +64,15 @@ export default {
         importAll(r) {
             r.keys().forEach(key => (this.images.push({ pathLong: r(key), pathShort: key })));
             this.images = this.images.map(image => {
+                let sold = false;
+                if(image.pathShort.split("_").length > 1 && image.pathShort.split("_")[2] && image.pathShort.split("_")[2].replace('.jpg', '') == "V") {
+                    sold = true;
+                }   
                 image = {
                     ...image,
                     Category: image.pathShort.replace('./', '').split("_")[0],
-                    Name: image.pathShort.split("_")[1],
+                    Name: image.pathShort.split("_")[1].replace('.jpg', ''),
+                    Sold: sold ? this.$t("sold") : "",
                 };
                 return image;
             });
