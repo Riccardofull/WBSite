@@ -38,7 +38,7 @@
               <g-link
                 :to="$tp($route.path, 'it-it', true)"
                 @click.native="notifyLocaleChanged('it-it')"
-                class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                class="-m-3 p-3 block rounded-md transition ease-in-out duration-150"
               >
                 Italiano
                 <span class="text-sm text-gray-600">({{$t('it-it')}})</span>
@@ -46,7 +46,7 @@
               <g-link
                 :to="$tp($route.path, 'en-us', true)"
                 @click.native="notifyLocaleChanged('en-us')"
-                class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                class="-m-3 p-3 block rounded-md transition ease-in-out duration-150"
               >
                 English
                 <span class="text-sm text-gray-600">({{$t('en-us')}})</span>

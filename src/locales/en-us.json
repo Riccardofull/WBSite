@@ -22,5 +22,6 @@
     "checkUrl": "Please check the URL in the address bar and try again.",
     "goBackHome": "Go back home",
     "sold": "Sold",
-    "email": "Email"
+    "email": "Email",
+    "noWorks": "No works available for this category"
 }

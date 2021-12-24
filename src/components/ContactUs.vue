@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="flex my-16 text-center justify-center text-md sm:text-xl font-medium">
+            <div class="flex my-16 text-center justify-center text-md sm:text-xl font-medium mb-24 md:mb-40 lg:mb-64">
                 <h3 class="text-gray-900">
                     {{ $t("email")}}: 
                 </h3>

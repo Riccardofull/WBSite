@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-50">
+    <div>
         <div class="relative">
             <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="border-b pb-6 border-gray-200">
@@ -19,8 +19,10 @@
         </div>
 
         <div class="max-w-2xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="grid grid-cols-1 gap-y-24 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                <div class="group" v-for="image in filteredImages" :key="image.Name">
+            <div v-if="filteredImages.length > 0"
+                class="grid grid-cols-1 gap-y-24 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                <div class="group" 
+                    v-for="image in filteredImages" :key="image.Name">
                     <div class="h-full bg-transparent rounded-lg overflow-hidden border border-gray-800">
                         <g-image :src="image.ImageUrl" alt="William Bondi" class="w-full h-full object-center object-cover group-hover:opacity-75" />
                     </div>
@@ -31,6 +33,8 @@
                         class="text-red-600 text-sm font-semibold uppercase">  {{ image.Sold }}</span>
                 </div>
             </div>
+            <div v-else
+                class="text-center text-gray-700">{{ $t("noWorks")}}</div>
         </div>
     </div>
 </template>
