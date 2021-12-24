@@ -54,7 +54,6 @@ export default {
         if(this.$route.query.category){
             this.selectedCategory = this.$route.query.category;
         }
-        this.importAll(require.context('../assets/img/drawings/', true, /\.jpg$/));
     },
     computed: {
         filteredImages(){
@@ -65,10 +64,6 @@ export default {
         },
     },
     methods: {
-        importAll(r) {
-            r.keys().forEach(key => (this.images.push({ pathLong: r(key), pathShort: key })));
-
-        },
         selectCategory(category){
             this.selectedCategory = category.Name;
             if(this.$route.query.category != this.selectedCategory){       
@@ -76,7 +71,7 @@ export default {
             }
         }
     },
-     watch: {
+    watch: {
         $route(to, from) {
             if(to.query.categories && to.query.category != "" && this.categories && this.categories.length > 0){
                 let cat = this.categories.find(c => c.Name == to.query.category);
