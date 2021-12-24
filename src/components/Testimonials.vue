@@ -1,11 +1,11 @@
 <template>
-    <div class="bg-white pt-16 lg:py-24">
+    <div class="bg-white">
         <div class="pb-16 bg-gray-800 lg:pb-0 lg:z-10 lg:relative">
             <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
             <div class="relative lg:-my-8">
                 <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
                 <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-                    <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full border border-gray-800">
+                    <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full border-2 border-gray-800">
                         <g-image class="object-cover" 
                             src="https://res.cloudinary.com/william-bondi/image/upload/v1640299099/RedAndWhite_PinUp258WEB_l36fvi.jpg" 
                             alt="William Bondi" />
