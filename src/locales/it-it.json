@@ -10,6 +10,7 @@
     "drawings": "Opere",
     "drawingsDesc": "Drawings description",
     "contacts": "Contatti",
+    "contactsDesc": "Per informazioni aggiuntive, per favore contattateci al seguente indirizzo.",
     "discoverMore": "Scopri di pù",
     "zodiac": "Zodiaco",
     "redAndWhite": "Red and white",
@@ -20,5 +21,6 @@
     "pageNotFound": "Page not found",
     "checkUrl": "Si prega di controllare l'URL nella barra degli indirizzi e riprovare.",
     "goBackHome": "Torna alla home",
-    "sold": "Venduto"
+    "sold": "Venduto",
+    "email": "Email"
 }

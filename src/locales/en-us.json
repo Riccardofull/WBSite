@@ -10,6 +10,7 @@
     "drawings": "Drawings",
     "drawingsDesc": "Drawings description",
     "contacts": "Contacts",
+    "contactsDesc": "For additional information, please contact us at the following address.",
     "discoverMore": "Discover more",
     "zodiac": "Zodiac",
     "redAndWhite": "Red and white",
@@ -20,5 +21,6 @@
     "pageNotFound": "Page not found",
     "checkUrl": "Please check the URL in the address bar and try again.",
     "goBackHome": "Go back home",
-    "sold": "Sold"
+    "sold": "Sold",
+    "email": "Email"
 }
