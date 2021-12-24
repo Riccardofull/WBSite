@@ -4,8 +4,9 @@
     "williamBondi": "William bondi",
     "williamBondiDesc": "Professional comic book and graphic designer, pin up artist, illustrator and more since 1980.",
     "whoIsWilliamBondi": "Who's William Bondi?",
-    "whoIsWilliamBondiDesc": "William Bondi is...",
+    "whoIsWilliamBondiDesc": "William Bondi has been drawing since 1980 in the workshop of Giovanni Romanini and Roberto Raviola. He also collaborates with other authors on some comic series. In 1991 he is the author of Elton Cop. He continues with Giorgio and Giacomo Cavedon of Ediperiodici until the closure of the publishing house. He collaborates with Talijancic, Castelli and Filippucci, then begins his career as an illustrator of pin-up girls. In the meantime he also devotes himself to other activities as an illustrator and creative for advertising.",
     "categories": "Categories",
+    "categoriesDesc": "View works divided by category",
     "home": "Home",
     "drawings": "Drawings",
     "drawingsDesc": "Drawings description",
@@ -23,5 +24,6 @@
     "goBackHome": "Go back home",
     "sold": "Sold",
     "email": "Email",
-    "noWorks": "No works available for this category"
+    "noWorks": "No works available for this category",
+    "testimonialsDesc": "The object of art is not to reproduce reality, but to create a reality of the same intensity."
 }

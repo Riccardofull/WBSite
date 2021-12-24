@@ -3,15 +3,17 @@
     <Hero />
     <Banner />
     <Categories />
+    <Testimonials />
     <Footer />
   </Layout>
 </template>
 
 <script>
-import Hero from "../components/Hero";
-import Categories from "../components/Categories";
+import Hero from "../components/Hero.vue";
+import Categories from "../components/Categories.vue";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner.vue";
+import Testimonials from "../components/Testimonials.vue";
 
 export default {
   metaInfo: {
@@ -22,6 +24,7 @@ export default {
     Categories,
     Footer,
     Banner,
+    Testimonials,
   }
 };
 </script>

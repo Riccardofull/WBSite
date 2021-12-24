@@ -24,7 +24,7 @@
                 <div class="group" 
                     v-for="image in filteredImages" :key="image.Name">
                     <div class="h-full bg-transparent rounded-lg overflow-hidden border border-gray-800">
-                        <g-image :src="image.ImageUrl" alt="William Bondi" class="w-full h-full object-center object-cover group-hover:opacity-75" />
+                        <g-image :src="image.ImageUrl" alt="William Bondi" class="w-full h-full object-center object-cover group-hover:opacity-75 cursor-pointer" />
                     </div>
                     <h3 class="mt-1 text-md text-gray-800 font-semibold">
                        {{ image.Name }}
