@@ -8,7 +8,7 @@
                     <button 
                         @click="$emit('closeModal')"
                         type="button" 
-                        class="ml-auto inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2sm:text-sm">
+                        class="rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2sm:text-sm">
                         {{ $t("close") }}
                     </button>
                 </div>

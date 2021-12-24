@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Modal v-show="modalOpen && selectedImage" 
+        <Modal v-if="modalOpen && selectedImage" 
             @closeModal="closeModal"
             :image="selectedImage"/>
         <div class="relative">
@@ -86,8 +86,8 @@ export default {
             }
         },
         openModal(img){
-           this.modalOpen = true; 
-           this.selectedImage = img;
+            this.selectedImage = img;
+            this.modalOpen = true; 
         },
         closeModal(){
             this.modalOpen = false;
