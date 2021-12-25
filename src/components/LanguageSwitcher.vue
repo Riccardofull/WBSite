@@ -3,12 +3,12 @@
     <button
       @click="open=!open"
       type="button"
-      class="group text-gray-700 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+      class="group text-gray-700 inline-flex items-center justify-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
     >
-      <span>{{$t($i18n.locale)}}</span>
+      <span class="flex flex-shrink-0 font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t($i18n.locale)}}</span>
       <svg
-        class="h-5 w-5 group-hover:text-white group-focus:text-white transition ease-in-out duration-150"
-        :class="open?'text-gray-600':'text-white'"
+        class="h-5 w-5 group-hover:text-gray-900 group-focus:text-white transition ease-in-out duration-150"
+        :class="open?'text-gray-800':'text-gray-900'"
         viewBox="0 0 20 20"
         fill="currentColor"
       >

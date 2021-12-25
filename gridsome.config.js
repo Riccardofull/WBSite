@@ -27,21 +27,21 @@ module.exports = {
       options: {
         locales: [
           'language-default',
+          'en-us',
           'it-it',
-          'en-us'
         ],
         pathAliases: {
           'language-default': 'language-default',
+          'en-us': 'en',
           'it-it': 'it',
-          'en-us': 'en'
         },
         fallbackLocale: 'en-us',
         defaultLocale: 'language-default',
         rewriteDefaultLanguage: false,
         messages: {
           'language-default': require('./src/locales/en-us.json'),
-          'it-it': require('./src/locales/it-it.json'),
           'en-us': require('./src/locales/en-us.json'),
+          'it-it': require('./src/locales/it-it.json'),
         }
       }
     },

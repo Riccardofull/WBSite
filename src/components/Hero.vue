@@ -15,6 +15,7 @@
                     <g-image class="h-8 w-auto sm:h-10" src="../assets/svg/williamBondi.svg" />
                   </a>
                   <div class="-mr-2 flex items-center md:hidden">
+                    <LanguageSwitcher class="mr-2 sm:mr-8"/>
                     <button @click="open = true" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset" aria-expanded="false">
                       <!--Open menu-->
                       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -29,7 +30,10 @@
                 <a @click="$router.push({ path: `/drawings`, query: { category: 'BlackAndWhite' } })" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
                 <a href="/contacts" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
               </div>
-            </nav>
+              <div class="hidden md:block md:ml-8">
+                <LanguageSwitcher />
+              </div>
+            </nav>  
           </div>
 
           <!--Mobile menu-->
@@ -51,8 +55,8 @@
               <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
                 <a @click="$router.push({ path: `/drawings`, query: { category: 'BlackAndWhite' } })" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
-                <a href="/contacts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
-              </div>
+                <a href="/contacts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>    
+              </div>    
             </div>
           </div>
         </div>
