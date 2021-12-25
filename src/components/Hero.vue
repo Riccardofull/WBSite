@@ -26,9 +26,9 @@
                 </div>
               </div>
               <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                <a href="/" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
-                <a @click="$router.push({ path: `/drawings`, query: { category: 'BlackAndWhite' } })" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
-                <a href="/contacts" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
+                <a @click="goToPage('/')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
+                <a @click="goToPage('/drawings')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
+                <a @click="goToPage('/contacts')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
               </div>
               <div class="hidden md:block md:ml-8">
                 <LanguageSwitcher />
@@ -53,9 +53,9 @@
                 </div>
               </div>
               <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
-                <a @click="$router.push({ path: `/drawings`, query: { category: 'BlackAndWhite' } })" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
-                <a href="/contacts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>    
+                <a @click="goToPage('/')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
+                <a @click="goToPage('/drawings')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
+                <a @click="goToPage('/contacts')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>    
               </div>    
             </div>
           </div>
@@ -96,5 +96,16 @@ export default {
       open: false
     };
   },
+  methods:{
+    goToPage(page){  
+      let language = this.$i18n.locale.split("-")[0]; 
+      if(page == "/drawings"){
+        this.$router.push({ path: "/" + language + page, query: { category: "BlackAndWhite" } });
+      }
+      else{
+        this.$router.push({ path: "/" + language + page });
+      }
+    }
+  }
 };
 </script>

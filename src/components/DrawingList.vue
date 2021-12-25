@@ -13,7 +13,7 @@
                                 @click="selectCategory(category)"
                                 class="text-center items-center text-sm font-medium text-gray-700 flex-nowrap flex-shrink-0 cursor-pointer"
                                 :class="selectedCategory == category.Name ? 'font-semibold' : 'font-medium'">                           
-                                {{ category.ViewName }}
+                                {{ $t(category.ViewName) }}
                             </div>                          
                         </div>
                     </div>

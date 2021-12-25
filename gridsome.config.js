@@ -19,27 +19,24 @@ const postcssPlugins = [
 module.exports = {
   siteName: 'William Bondi',
   siteUrl: "https://www.williambondi.info",
-  siteDescription: "",
+  siteDescription: "Professional comic book and graphic designer, pin up artist, illustrator and more since 1980.",
   titleTemplate: "William Bondi",
   plugins: [
     {
       use: "gridsome-plugin-i18n",
       options: {
         locales: [
-          'language-default',
           'en-us',
           'it-it',
         ],
         pathAliases: {
-          'language-default': 'language-default',
           'en-us': 'en',
           'it-it': 'it',
         },
         fallbackLocale: 'en-us',
-        defaultLocale: 'language-default',
-        rewriteDefaultLanguage: false,
+        defaultLocale: 'en-us',
+        rewriteDefaultLanguage: true,
         messages: {
-          'language-default': require('./src/locales/en-us.json'),
           'en-us': require('./src/locales/en-us.json'),
           'it-it': require('./src/locales/it-it.json'),
         }
