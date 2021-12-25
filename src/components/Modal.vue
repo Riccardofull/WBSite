@@ -4,14 +4,6 @@
             <div class="fixed inset-0 bg-gray-50 bg-opacity-75 transition-opacity" aria-hidden="true" />
             <div class="max-w-5xl h-full inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:p-6">
                 <Overview :image="image" @closeModal="closeModal"/>
-                <div class="w-full px-8">
-                    <button 
-                        @click="$emit('closeModal')"
-                        type="button" 
-                        class="rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2sm:text-sm">
-                        {{ $t("close") }}
-                    </button>
-                </div>
             </div>
         </div>
     </div>

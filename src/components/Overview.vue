@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white">
         <div class="pt-6">
-            <div class="flex w-full px-8">
+            <div class="flex w-full px-0 sm:px-6 lg:px-8">
                 <span class="text-md font-normal text-gray-900">{{ $t("williamBondi") }}</span>
                 <div @click="$emit('closeModal')"
                     class="cursor-pointer ml-auto">
@@ -52,7 +52,8 @@
                             <span class="text-gray-800 text-md">{{ image.Condition }}</span>
                             <span class="text-gray-800 text-md">{{ image.Binding }}</span>
                             <span class="text-gray-800 text-md">{{ image.Extra }}</span>
-                            <span class="text-gray-800 text-md">{{ image.Sold }}</span>
+                            <span class="text-gray-800 text-md"
+                                :class="image.Sold == $t('sold') ? 'text-red-600' : 'text-gray-800'">{{ image.Sold }}</span>
                         </div>
                     </div>
                 </div>
