@@ -10,7 +10,7 @@
     "@gridsome/plugin-sitemap": "^0.3.0",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/ui": "^0.3.0",
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.23",
     "gridsome-plugin-i18n": "^1.4.0",
     "particles.js": "^2.0.0",
     "sweetalert2": "^10.5.1",
