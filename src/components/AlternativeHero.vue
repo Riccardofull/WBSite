@@ -18,11 +18,12 @@
                         </div>
                         </div>
                     </div>
-                    <div class="hidden md:flex md:space-x-10">
+                    <div class="hidden md:flex md:space-x-10 ml-auto">
                         <a @click="goToPage('/')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
                         <a @click="goToPage('/drawings')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/drawings' ? 'font-semibold' : 'font-medium'">{{$t("drawings")}}</a>
                         <a @click="goToPage('/contacts')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
-                    </div>
+                         <LanguageSwitcher /> 
+                    </div> 
                     </nav>
                 </div>
 
