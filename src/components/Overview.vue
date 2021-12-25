@@ -46,14 +46,16 @@
                             <span class="text-gray-800 font-semibold text-md">{{$t("binding")}}</span>
                             <span class="text-gray-800 font-semibold text-md">{{$t("extra")}}</span>
                             <span class="text-gray-800 font-semibold text-md">{{$t("status")}}</span>
+                            <span class="text-gray-800 font-semibold text-md">{{$t("sizes")}}</span>
                         </div>
                         <div class="flex flex-col grid-cols-3">
                             <span class="text-gray-800 text-md">{{ image.NumOfItem }}</span>
-                            <span class="text-gray-800 text-md">{{ image.Condition }}</span>
-                            <span class="text-gray-800 text-md">{{ image.Binding }}</span>
-                            <span class="text-gray-800 text-md">{{ image.Extra }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Condition) }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Binding) }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Extra) }}</span>
                             <span class="text-gray-800 text-md"
-                                :class="image.Sold == $t('sold') ? 'text-red-600' : 'text-gray-800'">{{ image.Sold }}</span>
+                                :class="image.Sold == $t('sold') ? 'text-red-600' : 'text-gray-800'">{{ $t(image.Sold) }}</span>
+                            <span class="text-gray-800 text-md">{{ image.Size }}</span>
                         </div>
                     </div>
                 </div>

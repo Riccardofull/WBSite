@@ -33,11 +33,11 @@
                             alt="William Bondi"
                             class="w-full h-full object-center object-cover group-hover:opacity-75 cursor-pointer" />
                     </div>
-                    <h3 class="mt-1 text-md text-gray-800 font-semibold">
+                    <h3 class="mt-1 text-xl text-gray-800 font-normal">
                        {{ image.Name }}
                     </h3>
-                    <span v-if="image.Sold != $t('available')" 
-                        class="text-red-600 text-sm font-semibold uppercase">  {{ image.Sold }}</span>
+                    <span class="text-sm uppercase"
+                        :class="image.Sold != 'available' ? 'text-red-600 font-semibold' : 'text-gray-800'">  {{ $t(image.Sold) }}</span>
                 </div>
             </div>
             <div v-else
@@ -82,7 +82,8 @@ export default {
         selectCategory(category){
             this.selectedCategory = category.Name;
             if(this.$route.query.category != this.selectedCategory){       
-                this.$router.replace({ path: "/drawings", query: { category: category.Name } });
+                let language = this.$i18n.locale.split("-")[0]; 
+                this.$router.replace({ path: "/" + language + "/drawings", query: { category: category.Name } });
             }
         },
         openModal(img){
