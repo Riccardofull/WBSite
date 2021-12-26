@@ -2,7 +2,7 @@
     <div class="bg-white">
         <div class="pt-6">
             <div class="flex w-full px-0 sm:px-6 lg:px-8">
-                <span class="text-md font-normal text-gray-900">{{ $t("williamBondi") }}</span>
+                <span class="text-md font-semibold text-gray-900">{{ $t("williamBondi") }}</span>
                 <div @click="$emit('closeModal')"
                     class="cursor-pointer ml-auto">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -11,34 +11,20 @@
                 </div>
             </div>
 
-            <!-- Image gallery -->
-            <div class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
-                <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
-                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" alt="William Bondi">
-                </div>
-                <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-                    <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg" alt="William Bondi" class="w-full h-full object-center object-cover">
-                    </div>
-                    <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                        <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg" alt="William Bondi" class="w-full h-full object-center object-cover">
-                    </div>
-                </div>
-                <div class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
-                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg" alt="William Bondi" class="w-full h-full object-center object-cover">
-                </div>
-            </div>
+            <div class="flex mt-4 lg:mt-6 mx-auto sm:px-6 lg:px-8">           
+                <!-- Image -->
+                <img :src="image.ImageUrl" :alt="'William Bondi ' + image.Name" class="max-w-sm lg:max-w-xl pr-4">
 
-            <!-- Product info -->
-            <div class="max-w-2xl mx-auto pt-4 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-6 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
-                <div class="lg:col-span-3">
-                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+                <!-- Image info -->
+                <div>
+                    <div class="lg:col-span-3">
+                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         {{ image.Name }}
                     </h2>
                 </div>
 
                 <div>
-                    <p class="mt-4 sm:mt-8 mb-2 sm:mb-4 text-lg font-semibold text-gray-900">{{$t("details")}}</p>
+                    <p class="mt-4 sm:mt-8 mb-2 sm:mb-4 text-xl leading-tight font-semibold text-gray-900">{{$t("details")}}</p>
                     <div class="grid grid-cols-3">
                         <div class="flex flex-col grid-cols-1 col-span-2">
                             <span class="text-gray-800 font-semibold text-md">{{$t("numberOfItem")}}</span>
@@ -46,18 +32,21 @@
                             <span class="text-gray-800 font-semibold text-md">{{$t("binding")}}</span>
                             <span class="text-gray-800 font-semibold text-md">{{$t("extra")}}</span>
                             <span class="text-gray-800 font-semibold text-md">{{$t("status")}}</span>
+                            <span class="text-gray-800 font-semibold text-md">{{$t("technique")}}</span>
                             <span class="text-gray-800 font-semibold text-md">{{$t("sizes")}}</span>
                         </div>
                         <div class="flex flex-col grid-cols-3">
-                            <span class="text-gray-800 text-md">{{ image.NumOfItem }}</span>
-                            <span class="text-gray-800 text-md">{{ $t(image.Condition) }}</span>
-                            <span class="text-gray-800 text-md">{{ $t(image.Binding) }}</span>
-                            <span class="text-gray-800 text-md">{{ $t(image.Extra) }}</span>
+                            <span class="text-gray-800 text-md">{{ image.NumOfItem || "-" }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Condition) || "-" }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Binding) || "-" }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Extra) || "-" }}</span>
                             <span class="text-gray-800 text-md"
-                                :class="image.Sold == $t('sold') ? 'text-red-600' : 'text-gray-800'">{{ $t(image.Sold) }}</span>
-                            <span class="text-gray-800 text-md">{{ image.Size }}</span>
+                                :class="image.Sold != 'available' ? 'text-red-600' : 'text-gray-800'">{{ $t(image.Sold) || "-" }}</span>
+                            <span class="text-gray-800 text-md">{{ $t(image.Technique) || "-" }}</span>
+                            <span class="text-gray-800 text-md">{{ image.Size || "-" }}</span>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

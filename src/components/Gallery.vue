@@ -7,7 +7,7 @@
             <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="border-b pb-6 border-gray-200">
                     <div class="pt-4 flex items-center justify-center">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-3 gap-x-6 lg:grid-cols-6 xl:gap-x-8 w-full ">
+                        <div class="grid grid-cols-1 sm:grid-cols-5 gap-y-3 gap-x-6 lg:grid-cols-5 xl:gap-x-8 w-full ">
                             <div v-for="category in categories" 
                                 :key="category.Id"
                                 @click="selectCategory(category)"
@@ -23,21 +23,20 @@
 
         <div class="max-w-2xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
             <div v-if="filteredImages.length > 0"
-                class="grid grid-cols-1 gap-y-24 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                 <div class="group" 
                     v-for="image in filteredImages" :key="image.Name">
                     <div @click="openModal(image)"
-                        class="h-full bg-transparent overflow-hidden border border-gray-800">
+                        class="container h-full bg-transparent overflow-hidden border border-gray-700 cursor-pointer ">
+                        <div class="overlay">
+                            <div class="text font-semibold uppercase">{{ image.Name }}</div> 
+                        </div>
                         <g-image
                             :src="image.ImageUrl"
                             alt="William Bondi"
-                            class="zoom w-full h-full object-center object-cover group-hover:opacity-75 cursor-pointer" />
+                            class="zoom w-full h-full object-center object-cover group-hover:opacity-75 block">
+                        </g-image>
                     </div>
-                    <h3 class="mt-1 text-xl text-gray-800 font-normal">
-                       {{ image.Name }}
-                    </h3>
-                    <span class="text-sm uppercase"
-                        :class="image.Sold != 'available' ? 'text-red-600 font-semibold' : 'text-gray-800'">  {{ $t(image.Sold) }}</span>
                 </div>
             </div>
             <div v-else
@@ -115,5 +114,40 @@ export default {
 
 .zoom:hover {
     transform: scale(1.0); 
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: #2B363B;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+    z-index: 99;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 </style>
