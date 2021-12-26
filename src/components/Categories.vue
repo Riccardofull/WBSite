@@ -9,7 +9,7 @@
           <p class="mt-4 text-xl text-gray-500">{{$t("categoriesDesc")}}</p>
           <div class="mt-4 sm:flex sm:justify-center lg:justify-start">
             <div>
-              <a @click="goToPage('/drawings')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:opacity-90 md:text-lg cursor-pointer">
+              <a @click="goToPage('/gallery')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:opacity-90 md:text-lg cursor-pointer">
                 {{$t("show")}}
               </a>
             </div>
@@ -62,7 +62,7 @@ export default {
   methods: {
     goToPage(categoryName){
       let language = this.$i18n.locale.split("-")[0]; 
-      this.$router.push({ path: "/" + language + "/drawings", query: { category: "BlackAndWhite" } });
+      this.$router.push({ path: "/" + language + "/gallery", query: { category: "BlackAndWhite" } });
     }
   }
 }

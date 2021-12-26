@@ -49,7 +49,7 @@
 <script>
 import { categories } from "../static/categories.js";
 import { images } from "../static/images.js";
-import Modal from "../components/Modal.vue";
+import Modal from "./Modal.vue";
 
 export default {
     name: "DrawingList",
@@ -83,7 +83,7 @@ export default {
             this.selectedCategory = category.Name;
             if(this.$route.query.category != this.selectedCategory){       
                 let language = this.$i18n.locale.split("-")[0]; 
-                this.$router.replace({ path: "/" + language + "/drawings", query: { category: category.Name } });
+                this.$router.replace({ path: "/" + language + "/gallery", query: { category: category.Name } });
             }
         },
         openModal(img){

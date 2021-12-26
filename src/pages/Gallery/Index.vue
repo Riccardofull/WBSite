@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <AlternativeHero title="drawings" description="drawingsDesc"/>
+        <AlternativeHero title="gallery" description="galleryDesc"/>
         <DrawingList />
         <Footer />
     </Layout>
@@ -9,10 +9,10 @@
 <script>
 import AlternativeHero from "../../components/AlternativeHero.vue";
 import Footer from "../../components/Footer.vue";
-import DrawingList from "../../components/DrawingList.vue";
+import DrawingList from "../../components/Gallery.vue";
 
 export default {
-    name: "Drawings",
+    name: "Gallery",
     components: {
         AlternativeHero,
         Footer,

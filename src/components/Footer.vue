@@ -9,8 +9,8 @@
         </div>
 
         <div class="px-5 py-2">
-          <a href="/drawings" class="text-base text-gray-700 hover:text-gray-900">
-            {{ $t("drawings")}}
+          <a href="/gallery" class="text-base text-gray-700 hover:text-gray-900">
+            {{ $t("gallery")}}
           </a>
         </div>
 
