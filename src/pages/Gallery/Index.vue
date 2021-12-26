@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <AlternativeHero title="gallery" description="galleryDesc"/>
+        <AlternativeHero title="gallery" description=""/>
         <DrawingList />
         <Footer />
     </Layout>

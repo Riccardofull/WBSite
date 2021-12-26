@@ -6,9 +6,11 @@
                     <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
                     <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                         <div class="flex items-center justify-between w-full md:w-auto">
-                        <a href="/">
-                            <g-image class="h-8 w-auto sm:h-10" src="../assets/svg/williamBondi.svg" alt="William Bondi" />
-                        </a>
+                        <g-image 
+                            @click="goToPage('/')"
+                            class="h-8 w-auto sm:h-10 cursor-pointer"
+                            src="../assets/svg/williamBondi.svg"
+                            alt="William Bondi" />
                         <div class="-mr-2 flex items-center md:hidden">
                             <button @click="open = true" type="button" class=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -82,12 +84,13 @@ export default {
     methods:{
         goToPage(page){  
             let language = this.$i18n.locale.split("-")[0]; 
+            let path = "/" + language + page;     
             if(page == "/gallery"){
-                this.$router.push({ path: "/" + language + page, query: { category: "BlackAndWhite" } });
+                this.$router.push({ path: path, query: { category: "BlackAndWhite" } });
             }
             else{
-                this.$router.push({ path: "/" + language + page });
-            }
+                this.$router.push({ path: path });
+            }       
         }
     }
 };

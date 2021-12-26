@@ -21,7 +21,7 @@
                 <div class="flex items-center space-x-6 lg:space-x-8">
                   <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100 border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299151/Colors_OPP125WEB_cbip7i.jpg" alt="William Bondi Colors" class="w-full h-full object-center object-cover" />
+                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299140/BlackAndWhite_Pinup256Web_mtfra5.jpg" alt="William Bondi Black And White" class="w-full h-full object-center object-cover" />
                     </div>
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
                       <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299084/Bear_Opp2_zvstlo.jpg" alt="William Bondi Bear" class="w-full h-full object-center object-cover" />
@@ -29,7 +29,7 @@
                   </div>
                   <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299133/BlackAndWhite_2C_n87yks.jpg" alt="William Bondi Hard" class="w-full h-full object-center object-cover" />
+                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299142/BlackAndWhite_Catwoman224Web_gfoydt.jpg" alt="William Bondi Hard" class="w-full h-full object-center object-cover" />
                     </div>
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
                       <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640300825/00-copertina-zodiaco2_rpmt5p.jpg" alt="William Bondi Zodiac" class="w-full h-full object-center object-cover" />
@@ -40,7 +40,7 @@
                   </div>
                   <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299102/RedAndWhite_Studio179WEB_mautpl.jpg" alt="William Bondi Red And White" class="w-full h-full object-center object-cover" />
+                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299115/RedAndWhite_Studio183WEB_efy6od.jpg" alt="William Bondi Red And White" class="w-full h-full object-center object-cover" />
                     </div>
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
                       <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299097/Bear_Opp180Web_zeou7n.jpg" alt="William Bondi Black And White" class="w-full h-full object-center object-cover" />

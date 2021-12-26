@@ -27,11 +27,11 @@
                 <div class="group" 
                     v-for="image in filteredImages" :key="image.Name">
                     <div @click="openModal(image)"
-                        class="h-full bg-transparent rounded-lg overflow-hidden border border-gray-800">
+                        class="h-full bg-transparent overflow-hidden border border-gray-800">
                         <g-image
                             :src="image.ImageUrl"
                             alt="William Bondi"
-                            class="w-full h-full object-center object-cover group-hover:opacity-75 cursor-pointer" />
+                            class="zoom w-full h-full object-center object-cover group-hover:opacity-75 cursor-pointer" />
                     </div>
                     <h3 class="mt-1 text-xl text-gray-800 font-normal">
                        {{ image.Name }}
@@ -106,3 +106,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.zoom {
+    transform: scale(1.2);
+    transition: transform .7s; 
+}
+
+.zoom:hover {
+    transform: scale(1.0); 
+}
+</style>

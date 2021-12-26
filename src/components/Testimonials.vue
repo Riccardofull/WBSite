@@ -7,7 +7,7 @@
                 <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
                     <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full border-2 border-gray-800">
                         <g-image class="object-cover" 
-                            src="https://res.cloudinary.com/william-bondi/image/upload/v1640299099/RedAndWhite_PinUp258WEB_l36fvi.jpg" 
+                            src="https://res.cloudinary.com/william-bondi/image/upload/v1640299115/RedAndWhite_Studio183WEB_efy6od.jpg" 
                             alt="William Bondi" />
                     </div>
                 </div>

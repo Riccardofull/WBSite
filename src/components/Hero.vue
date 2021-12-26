@@ -11,9 +11,10 @@
             <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
-                  <a href="/">
-                    <g-image class="h-8 w-auto sm:h-10" src="../assets/svg/williamBondi.svg" />
-                  </a>
+                  <g-image 
+                    @click="goToPage('/')"
+                    class="h-8 w-auto sm:h-10 cursor-pointer"
+                    src="../assets/svg/williamBondi.svg" />
                   <div class="-mr-2 flex items-center md:hidden">
                     <LanguageSwitcher class="mr-2 sm:mr-8"/>
                     <button @click="open = true" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset" aria-expanded="false">
@@ -99,11 +100,12 @@ export default {
   methods:{
     goToPage(page){  
       let language = this.$i18n.locale.split("-")[0]; 
+      let path = "/" + language + page;
       if(page == "/gallery"){
-        this.$router.push({ path: "/" + language + page, query: { category: "BlackAndWhite" } });
+        this.$router.push({ path: path, query: { category: "BlackAndWhite" } });
       }
       else{
-        this.$router.push({ path: "/" + language + page });
+        this.$router.push({ path: path });
       }
     }
   }
