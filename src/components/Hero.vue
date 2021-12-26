@@ -100,13 +100,7 @@ export default {
   methods:{
     goToPage(page){  
       let language = this.$i18n.locale.split("-")[0]; 
-      let path = "/" + language + page;
-      if(page == "/gallery"){
-        this.$router.push({ path: path, query: { category: "BlackAndWhite" } });
-      }
-      else{
-        this.$router.push({ path: path });
-      }
+      this.$router.push({ path: "/" + language + page });
     }
   }
 };
