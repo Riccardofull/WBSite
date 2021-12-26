@@ -27,9 +27,9 @@
                 </div>
               </div>
               <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                <a @click="goToPage('/')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
-                <a @click="goToPage('/gallery')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/gallery' ? 'font-semibold' : 'font-medium'">{{$t("gallery")}}</a>
-                <a @click="goToPage('/contacts')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>
+                <a @click="goToPage('/')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("home")}}</a>
+                <a @click="goToPage('/gallery')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("gallery")}}</a>
+                <a @click="goToPage('/contacts')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("contacts")}}</a>
               </div>
               <div class="hidden md:block md:ml-8">
                 <LanguageSwitcher />
@@ -54,9 +54,9 @@
                 </div>
               </div>
               <div class="px-2 pt-2 pb-3 space-y-1">
-                <a @click="goToPage('/')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/' ? 'font-semibold' : 'font-medium'">{{$t("home")}}</a>
-                <a @click="goToPage('/gallery')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/gallery' ? 'font-semibold' : 'font-medium'">{{$t("gallery")}}</a>
-                <a @click="goToPage('/contacts')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer" :class="$route.path == '/contacts' ? 'font-semibold' : 'font-medium'">{{$t("contacts")}}</a>    
+                <a @click="goToPage('/')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("home")}}</a>
+                <a @click="goToPage('/gallery')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("gallery")}}</a>
+                <a @click="goToPage('/contacts')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("contacts")}}</a>    
               </div>    
             </div>
           </div>
