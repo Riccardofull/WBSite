@@ -1,5 +1,3 @@
-import i18n from "../i18n.js"
-
 export const categories = [
     {
         Id: 1,
@@ -23,12 +21,7 @@ export const categories = [
     },
     {
         Id: 5,
-        Name: "Zodiac",
-        ViewName: "zodiac",
-    },
-    {
-        Id: 6,
-        Name: "Hard",
-        ViewName: "hard",
+        Name: "RedZone",
+        ViewName: "redZone",
     },
 ];

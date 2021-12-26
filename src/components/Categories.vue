@@ -4,9 +4,9 @@
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
         <div class="sm:max-w-lg">
           <h1 class="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-            {{$t("categories")}}
+            {{$t("gallery")}}
           </h1>
-          <p class="mt-4 text-xl text-gray-500">{{$t("categoriesDesc")}}</p>
+          <p class="mt-4 text-xl text-gray-500">{{$t("galleryDesc")}}</p>
           <div class="mt-4 sm:flex sm:justify-center lg:justify-start">
             <div>
               <a @click="goToPage('/gallery')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:opacity-90 md:text-lg cursor-pointer">
