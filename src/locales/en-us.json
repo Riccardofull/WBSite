@@ -37,5 +37,8 @@
     "status": "Status",
     "available": "Available",
     "sizes": "Sizes",
-    "technique": "Technique"
+    "technique": "Technique",
+    "back": "Back",
+    "confirm": "Confirm",
+    "redZoneAlertDesc": "This section contains images that are not suitable for viewing by persons under 16 years of age." 
 }

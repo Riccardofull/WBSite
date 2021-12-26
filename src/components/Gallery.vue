@@ -1,8 +1,13 @@
 <template>
     <div>
         <Modal v-if="modalOpen && selectedImage" 
-            @closeModal="closeModal"
+            @closeModal="modalOpen = false"
             :image="selectedImage"/>
+        <Alert v-if="alertOpen" 
+            :title="'redZone'"
+            :description="'redZoneAlertDesc'"
+            @confirm="proceedToRedZone"
+            @back="alertOpen = false" />
         <div class="relative">
             <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="border-b pb-6 border-gray-200">
@@ -49,10 +54,11 @@
 import { categories } from "../static/categories.js";
 import { images } from "../static/images.js";
 import Modal from "./Modal.vue";
+import Alert from "./Alert.vue";
 
 export default {
     name: "DrawingList",
-    components: { Modal },
+    components: { Modal, Alert },
     data() {
         return {
             images: [],
@@ -60,6 +66,8 @@ export default {
             selectedCategory: "BlackAndWhite",
             selectedImage: null,
             modalOpen: false,
+            alertOpen: false,
+            canOpenRedZone: false,
         }
     },
     mounted() {
@@ -78,20 +86,26 @@ export default {
         },
     },
     methods: {
-        selectCategory(category){
-            this.selectedCategory = category.Name;
-            if(this.$route.query.category != this.selectedCategory){       
-                let language = this.$i18n.locale.split("-")[0]; 
-                this.$router.replace({ path: "/" + language + "/gallery", query: { category: category.Name } });
+        proceedToRedZone() {
+            this.alertOpen = false;
+            this.canOpenRedZone = true;
+            this.loadSelectedCategory("RedZone");
+        },
+        selectCategory(category){      
+            if(category.Name == "RedZone" && !this.canOpenRedZone){
+                this.alertOpen = true;
             }
+            else{
+                this.loadSelectedCategory(category.Name);
+            }
+        },
+        loadSelectedCategory(category){
+            this.selectedCategory = category;
         },
         openModal(img){
             this.selectedImage = img;
             this.modalOpen = true; 
         },
-        closeModal(){
-            this.modalOpen = false;
-        }
     },
     watch: {
         $route(to, from) {
