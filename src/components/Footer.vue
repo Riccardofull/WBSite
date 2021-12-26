@@ -2,22 +2,22 @@
   <footer class="bg-white">
     <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
       <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-        <div class="px-5 py-2">
-          <a href="/" class="text-base text-gray-700 hover:text-gray-900">
+        <div class="px-5 py-2 cursor-pointer">
+          <span @click="goToPage('/')" class="text-base text-gray-700 hover:text-gray-900">
             {{ $t("home")}}
-          </a>
+          </span>
         </div>
 
-        <div class="px-5 py-2">
-          <a href="/gallery" class="text-base text-gray-700 hover:text-gray-900">
+        <div @click="goToPage('/gallery')" class="px-5 py-2 cursor-pointer">
+          <span class="text-base text-gray-700 hover:text-gray-900">
             {{ $t("gallery")}}
-          </a>
+          </span>
         </div>
 
-        <div class="px-5 py-2">
-          <a href="/contacts" class="text-base text-gray-700 hover:text-gray-900">
+        <div @click="goToPage('/contacts')" class="px-5 py-2 cursor-pointer">
+          <span class="text-base text-gray-700 hover:text-gray-900">
             {{ $t("contacts")}}
-          </a>
+          </span>
         </div>
       </nav>
       <div class="mt-8 flex justify-center space-x-4">
@@ -52,6 +52,17 @@ query {
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  methods: {
+    goToPage(page){  
+      let language = this.$i18n.locale.split("-")[0]; 
+      if(page == "/gallery"){
+        this.$router.push({ path: "/" + language + page, query: { category: "BlackAndWhite" } });
+      }
+      else{
+        this.$router.push({ path: "/" + language + page });
+      }
+    }
+  }
 };
 </script>
