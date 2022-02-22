@@ -36,7 +36,7 @@
         </a>
       </div>
       <p class="mt-8 text-center text-base text-gray-700">
-        &copy; 2021 William Bondi. All rights reserved.
+        &copy; 2022 William Bondi. All rights reserved.
       </p>
     </div>
   </footer>

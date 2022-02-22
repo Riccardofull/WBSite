@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-gray-800 pt-0 sm:pt-6">
         <Modal v-if="modalOpen && selectedImage" 
             @closeModal="modalOpen = false"
             :image="selectedImage"/>
@@ -10,13 +10,13 @@
             @back="alertOpen = false" />
         <div class="relative">
             <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="border-b pb-6 border-gray-200">
+                <div class="border-b pb-6 border-white">
                     <div class="pt-4 flex items-center justify-center">
                         <div class="grid grid-cols-1 sm:grid-cols-5 gap-y-3 gap-x-6 lg:grid-cols-5 xl:gap-x-8 w-full ">
                             <div v-for="category in categories" 
                                 :key="category.Id"
                                 @click="selectCategory(category)"
-                                class="text-center items-center text-sm font-medium text-gray-700 flex-nowrap flex-shrink-0 cursor-pointer"
+                                class="text-center items-center text-sm font-medium text-white flex-nowrap flex-shrink-0 cursor-pointer"
                                 :class="selectedCategory == category.Name ? 'font-semibold' : 'font-medium'">                           
                                 {{ $t(category.ViewName) }}
                             </div>                          
@@ -32,7 +32,7 @@
                 <div class="group" 
                     v-for="image in filteredImages" :key="image.Name">
                     <div @click="openModal(image)"
-                        class="container h-full bg-transparent overflow-hidden border border-gray-700 cursor-pointer ">
+                        class="container h-full bg-transparent overflow-hidden border border-white cursor-pointer ">
                         <div class="overlay">
                             <div class="text font-semibold uppercase">{{ image.Name }}</div> 
                         </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div v-else
-                class="text-center text-gray-700">{{ $t("noWorks")}}</div>
+                class="text-center white">{{ $t("noWorks")}}</div>
         </div>
     </div>
 </template>
