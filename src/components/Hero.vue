@@ -29,6 +29,7 @@
               <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                 <a @click="goToPage('/')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("home")}}</a>
                 <a @click="goToPage('/gallery')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("gallery")}}</a>
+                <a @click="goToPage('/biography')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("bio")}}</a>
                 <a @click="goToPage('/contacts')" class="font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("contacts")}}</a>
               </div>
               <div class="hidden md:block md:ml-8">
@@ -56,6 +57,7 @@
               <div class="px-2 pt-2 pb-3 space-y-1">
                 <a @click="goToPage('/')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("home")}}</a>
                 <a @click="goToPage('/gallery')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("gallery")}}</a>
+                <a @click="goToPage('/biography')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("bio")}}</a>
                 <a @click="goToPage('/contacts')" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 cursor-pointer">{{$t("contacts")}}</a>    
               </div>    
             </div>
