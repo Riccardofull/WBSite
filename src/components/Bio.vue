@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+        <div class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-8">
             <g-image class="h-96 w-full object-cover lg:h-full" style="object-position: 0% 30%" src="https://res.cloudinary.com/william-bondi/image/upload/v1647297650/Screenshot_2022-03-14_234041_v5uhvg.png" alt="" />
             <div class="lg:col-start-2">
                 <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 text-justify px-2 sm:px-12 lg:px-0">
