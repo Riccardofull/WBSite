@@ -13,7 +13,7 @@
 
             <div class="flex mt-4 lg:mt-6 mx-auto sm:px-6 lg:px-8">           
                 <!-- Image -->
-                <img :src="image.ImageUrl" :alt="'William Bondi ' + image.Name" class="max-w-sm lg:max-w-xl pr-4">
+                <g-image :src="image.ImageUrl" :alt="'William Bondi ' + image.Name" class="max-w-sm lg:max-w-xl pr-4" />
 
                 <!-- Image info -->
                 <div>
