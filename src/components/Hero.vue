@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <g-image style="object-position: 0% 15%" class="w-full p-4 lg:p-0 object-cover lg:block lg:w-full lg:h-full" src="https://res.cloudinary.com/william-bondi/image/upload/v1640300889/williamBondiBiancaneve_u9kvyu.jpg" alt="William Bondi Biancaneve" />
+    <g-image style="object-position: 0% 15%" class="w-full p-4 lg:p-0 object-cover lg:block lg:w-full lg:h-full" src="../assets/img/Colors/williamBondiBiancaneve_u9kvyu.jpg" alt="William Bondi Biancaneve" />
     </div>
   </div>
 </template>

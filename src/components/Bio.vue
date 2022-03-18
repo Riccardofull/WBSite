@@ -13,8 +13,8 @@
                     <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
                         <figure>
                             <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                                <g-image class="object-cover object-center" src="https://res.cloudinary.com/william-bondi/image/upload/v1647297109/Screenshot_2022-03-14_232324_x7czs1.png" alt="William bondi ulula" />  
-                                <g-image class="object-cover object-center" src="https://res.cloudinary.com/william-bondi/image/upload/v1647297240/Screenshot_2022-03-14_233250_sxevjk.png" alt="William bondi bionika elton cop pornostar" />
+                                <g-image class="object-cover object-center" src="../assets/img/BlackAndWhite/ulula.png" alt="William bondi ulula" />  
+                                <g-image class="object-cover object-center" src="../assets/img/Colors/bionika.png" alt="William bondi bionika elton cop pornostar" />
                             </div>             
                         </figure>
                     </div>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-8">
-            <g-image class="h-96 w-full object-cover lg:h-full" style="object-position: 0% 30%" src="https://res.cloudinary.com/william-bondi/image/upload/v1647297650/Screenshot_2022-03-14_234041_v5uhvg.png" alt="" />
+            <g-image class="h-96 w-full object-cover lg:h-full" style="object-position: 0% 30%" src="../assets/img/Colors/OrsettiPericolosi.png" alt="William Bondi Bear" />
             <div class="lg:col-start-2">
                 <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 text-justify px-2 sm:px-12 lg:px-0">
                     <p class="mt-8 text-lg text-gray-500 text-justify">{{$t("bioDesc3")}}</p>

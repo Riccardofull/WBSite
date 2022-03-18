@@ -21,29 +21,29 @@
                 <div class="flex items-center space-x-6 lg:space-x-8">
                   <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100 border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299140/BlackAndWhite_Pinup256Web_mtfra5.jpg" alt="William Bondi Black And White" class="w-full h-full object-center object-cover" />
+                      <g-image src="../assets/img/BlackAndWhite/BB022.jpg V.jpg" alt="William Bondi Black And White" class="w-full h-full object-center object-cover" />
                     </div>
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299084/Bear_Opp2_zvstlo.jpg" alt="William Bondi Bear" class="w-full h-full object-center object-cover" />
-                    </div>
-                  </div>
-                  <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                    <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299142/BlackAndWhite_Catwoman224Web_gfoydt.jpg" alt="William Bondi Hard" class="w-full h-full object-center object-cover" />
-                    </div>
-                    <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640300825/00-copertina-zodiaco2_rpmt5p.jpg" alt="William Bondi Zodiac" class="w-full h-full object-center object-cover" />
-                    </div>
-                    <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299107/RedAndWhite_Studio182WEB_V_fo3iyx.jpg" alt="William Bondi" class="w-full h-full object-center object-cover" />
+                      <g-image src="../assets/img/Bear/OPP-2-serie01.jpg" alt="William Bondi Bear" class="w-full h-full object-center object-cover" />
                     </div>
                   </div>
                   <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299115/RedAndWhite_Studio183WEB_efy6od.jpg" alt="William Bondi Red And White" class="w-full h-full object-center object-cover" />
+                      <g-image src="../assets/img/BlackAndWhite/le-sbirrine27b.jpg" alt="William Bondi Hard" class="w-full h-full object-center object-cover" />
                     </div>
                     <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
-                      <g-image src="https://res.cloudinary.com/william-bondi/image/upload/v1640299097/Bear_Opp180Web_zeou7n.jpg" alt="William Bondi Black And White" class="w-full h-full object-center object-cover" />
+                      <g-image src="../assets/img/Zodiaco/00-copertina-zodiaco2.jpg" alt="William Bondi Zodiac" class="w-full h-full object-center object-cover" />
+                    </div>
+                    <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
+                      <g-image src="../assets/img/BlackAndWhite/pin-up04-V.jpg" alt="William Bondi" class="w-full h-full object-center object-cover" />
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
+                      <g-image src="../assets/img/RedAndWhite/pinup138WEB.jpg" alt="William Bondi Red And White" class="w-full h-full object-center object-cover" />
+                    </div>
+                    <div class="w-44 h-64 rounded-lg overflow-hidden border border-gray-100">
+                      <g-image src="../assets/img/BlackAndWhite/pin-up256WEB.jpg" alt="William Bondi Black And White" class="w-full h-full object-center object-cover" />
                     </div>
                   </div>
                 </div>

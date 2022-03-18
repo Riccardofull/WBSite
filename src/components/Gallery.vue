@@ -30,17 +30,16 @@
             <div v-if="filteredImages.length > 0"
                 class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                 <div class="group" 
-                    v-for="image in filteredImages" :key="image.Name">
+                    v-for="image in filteredImages" :key="image.Id">
                     <div @click="openModal(image)"
                         class="container h-full bg-transparent overflow-hidden border border-white cursor-pointer ">
                         <div class="overlay">
                             <div class="text font-semibold uppercase">{{ image.Name }}</div> 
                         </div>
                         <g-image
-                            :src="image.ImageUrl"
+                            :src="getImgUrl(image.ImageUrl)"
                             alt="William Bondi"
-                            class="zoom w-full h-full object-center object-cover group-hover:opacity-75 block">
-                        </g-image>
+                            class="zoom w-full h-full object-center object-cover group-hover:opacity-75 block" />
                     </div>
                 </div>
             </div>
@@ -76,6 +75,13 @@ export default {
         if(this.$route.query.category){
             this.selectedCategory = this.$route.query.category;
         }
+        //TO REMOVE
+        var imageNames = require.context(
+                '@/assets/img/BlackAndWhite/',
+                true,
+                /^.*\.jpg$/
+            );
+        console.log(imageNames.keys());       
     },
     computed: {
         filteredImages(){
@@ -86,6 +92,9 @@ export default {
         },
     },
     methods: {
+        getImgUrl: function (imagePath) {
+            return require('@/assets/img/' + imagePath);
+        },
         proceedToRedZone() {
             this.alertOpen = false;
             this.canOpenRedZone = true;

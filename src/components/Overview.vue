@@ -12,8 +12,8 @@
             </div>
 
             <div class="flex mt-4 lg:mt-6 mx-auto sm:px-6 lg:px-8">           
-                <!-- Image -->
-                <g-image :src="image.ImageUrl" :alt="'William Bondi ' + image.Name" class="max-w-sm lg:max-w-xl pr-4" />
+                <!-- Image -->                
+                <g-image :src="getImgUrl(image.ImageUrl)" :alt="'William Bondi ' + image.Name" class="max-w-sm lg:max-w-xl pr-4" />
 
                 <!-- Image info -->
                 <div>
@@ -62,5 +62,10 @@ export default {
             required: true
         }
     },
+    methods: {
+        getImgUrl: function (imagePath) {
+            return require('@/assets/img/' + imagePath);
+        },
+    }
 }
 </script>
