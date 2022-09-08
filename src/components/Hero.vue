@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <g-image style="object-position: 0% 15%" class="w-full p-4 lg:p-0 object-cover lg:block lg:w-full lg:h-full" src="../assets/img/RedAndWhite/pinup138WEB.jpg" alt="William Bondi" />
+      <g-image style="object-position: 0% 13%" class="w-full lg:p-0 object-cover lg:block lg:w-full lg:h-full" src="../assets/img/RedAndWhite/pinup138WEB.jpg" alt="William Bondi" />
     </div>
   </div>
 </template>
